@@ -44,6 +44,26 @@
     <hr />
 
     <article>
+        <form name="myForm">
+            <label>
+                Email
+            </label>
+            <input type="email"
+                   name="myEmail"
+                   minlength="5"
+                   maxlength="100"
+                   ng-model="myEmail"
+                   required />
+            <div ng-if="myForm.myEmail.$invalid">Invalid.</div>
+            <div ng-if="myForm.myEmail.$valid">Valid.</div>
+            <div ng-if="myForm.myEmail.$pristine">Pristine.</div>
+            <div ng-if="myForm.myEmail.$dirty">Dirty.</div>
+
+        </form>
+    </article>
+    <hr />
+
+    <article>
         <h1>
             Ambient Form State
         </h1>
