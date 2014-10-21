@@ -1,0 +1,46 @@
+{
+  "name": "ambient",
+  "version": "1.0.5",
+  "description": "Ambient design is a methodology for creating layout.",
+  "main": [
+    "dist/css/ambient.css",
+    "dist/css/design-patterns.css",
+    "dist/js/prefixfree.js"
+  ],
+  "keywords": [
+    "css",
+    "flexbox",
+    "front-end",
+    "framework",
+    "layout"
+  ],
+  "authors": [
+    "Ken Buras <@av8boogie>"
+  ],
+  "license": "MIT",
+  "homepage": "http://ionlyseespots.github.io/ambient-design/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "admin-shell",
+    "ambient",
+    "assets",
+    "layout",
+    "design-patterns",
+    "docs",
+    "examples",
+    "less",
+    "index.html"
+  ],
+  "_release": "1.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.5",
+    "commit": "8d6db3bb4051b6012a463669b56b9416f6b138c8"
+  },
+  "_source": "git://github.com/ionlyseespots/ambient-design.git",
+  "_target": "~1.0.5",
+  "_originalSource": "ambient",
+  "_direct": true
+}
