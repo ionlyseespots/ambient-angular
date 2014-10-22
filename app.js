@@ -1,4 +1,4 @@
-angular.module('ambientsandbox',['ngMessages']).controller('DemoController', ['$scope',function($scope) {
+angular.module('ambientAngular',['ngMessages']).controller('DemoController', ['$scope',function($scope) {
 
 }]).service('usernameService',['$http','$q','$timeout',function($http,$q,$timeout){
     this.checkAvailability=function(username){

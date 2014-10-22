@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html ng-app="ambientsandbox">
+<html ng-app="ambientAngular">
 
 <head>
     <meta charset="utf-8" />
     <title>AngularJS 1.3 Form Validations</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="bower_components/ambient/dist/css/ambient.css" />
     <link rel="stylesheet" href="bower_components/ambient/dist/css/design-patterns.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.3.0-rc.0/angular-messages.js"></script>
+    <script src="http://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
+
     <script src="bower_components/ambient/dist/js/prefixfree.js"></script>
-    <script src="app.js"></script>
+
+    <!--<script src="app.js"></script>-->
+    <!--Modularize ambient-angular--->
+    <script src="app/ambientAngular.module.js"></script>
+    <script src="app/formStates/formStates.module.js"></script>
+    <script src="app/navs/navs.module.js"></script>
+    <script src="app/uiElements/uiElements.module.js"></script>
+    <script src="app/uxShells/uxShells.module.js"></script>
+
 </head>
 
-<body ng-controller="DemoController">
+<body>
 <h1>AngularJS 1.3 Form States within Ambient</h1>
 <main role="main">
     <article>
         <h1>
             Validation, ngMessages, $asyncValidators, and $pending
         </h1>
-        <form name="demoForm" novalidate>
+        <form name="demoForm" ng-controller="formStatesCtrl" novalidate>
             Username:
             <input type="text" name="username" ng-model="username" username-validator ng-required="true" />
             <!--$asyncValidators with the $pending Property-->
@@ -31,7 +43,6 @@
                 <div class="error-message" ng-show="demoForm.username.$error.required">Username is required.</div>
                 <div class="error-message" ng-show="demoForm.username.$error.username">Username must contain only letters and numbers.</div>
                 <div class="error-message" ng-message="usernameAvailability">Sorry! Username has been taken</div>
-                <!--Using ngMessages to Display Errors-->
                 <!--<div class="error-message" ng-message="required">Username is required.</div>-->
                 <!--<div class="error-message" ng-message="username">Username must contain only letters and numbers.</div>-->
 
@@ -84,7 +95,7 @@
 </main>
 <footer>
     <h1>
-        Resource
+        Helpful
     </h1>
     <p>
         http://www.yearofmoo.com/2014/09/taming-forms-in-angularjs-1-3.html
@@ -94,6 +105,12 @@
     </p>
     <p>
         http://www.htmlxprs.com/post/11/angularjs-1.3-form-validation-tutorial
+    </p>
+    <p>
+        https://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-7-%E2%80%93-creating-a-unique-value-directive-using-asyncvalidators
+    </p>
+    <p>
+        https://blog.safaribooksonline.com/2014/03/27/13-step-guide-angularjs-modularization/
     </p>
 </footer>
 </body>
