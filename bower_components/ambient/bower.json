@@ -1,18 +1,18 @@
 {
   "name": "ambient",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ambient design is a methodology for creating layout.",
   "main": [
     "dist/css/ambient.css",
-    "dist/css/design-patterns.css",
-    "dist/js/prefixfree.js"
+    "dist/css/ambient.min.css"
   ],
   "keywords": [
     "css",
     "flexbox",
     "front-end",
     "framework",
-    "layout"
+    "layout",
+    "grid"
   ],
   "authors": [
     "Ken Buras <@av8boogie>"
@@ -23,14 +23,14 @@
     "**/.*",
     "node_modules",
     "bower_components",
-      "admin-shell",
-      "ambient",
-      "assets",
-      "layout",
-      "design-patterns",
-      "docs",
-      "examples",
-      "less",
-      "index.html"
+    "admin-shell",
+    "ambient",
+    "assets",
+    "layout",
+    "design-patterns",
+    "docs",
+    "examples",
+    "less",
+    "index.html"
   ]
 }
