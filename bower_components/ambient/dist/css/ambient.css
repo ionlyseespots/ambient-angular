@@ -1183,10 +1183,10 @@ img {
 [am-form~="aligned"] > span input,
 [am-form~="aligned"] > span select,
 [am-form~="aligned"] > span textarea {
-    -webkit-flex: 1 0.01%;
-    -moz-flex: 1 0.01%;
-    -ms-flex: 1 0.01%;
-    flex: 1 0.01%;
+    -webkit-flex: 1 8.3333%;
+    -moz-flex: 1 8.3333%;
+    -ms-flex: 1 8.3333%;
+    flex: 1 8.3333%;
 }
 /**
 * Multi-column
@@ -1209,10 +1209,10 @@ img {
     width: 100%;
 }
 [am-form~="multicolumn"] > div {
-    -webkit-flex: 1 0.01%;
-    -moz-flex: 1 0.01%;
-    -ms-flex: 1 0.01%;
-    flex: 1 0.01%;
+    -webkit-flex: 1 8.3333%;
+    -moz-flex: 1 8.3333%;
+    -ms-flex: 1 8.3333%;
+    flex: 1 8.3333%;
 }
 /**
 * Iconography
