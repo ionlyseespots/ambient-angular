@@ -1214,6 +1214,86 @@ img {
     -ms-flex: 1 8.3333%;
     flex: 1 8.3333%;
 }
+
+[am-message] {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    display: block;
+    min-height: 100px;
+    margin: 1vw 0;
+    padding: 1vw;
+    max-width: 50%;
+}
+
+[am-message~="z-1"]:after {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    content: "";
+    top:0;
+    bottom:0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message~="z-1"]:before {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message~="z-2"]:after {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    content: "";
+    top:0;
+    bottom:0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message~="z-2"]:before {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message~="z-3"]:after {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    content: "";
+    top:0;
+    bottom:0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message~="z-3"]:before {
+    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+[am-message="4"] {
+
+}
+[am-message="5"] {
+
+}
+[am-message~="info"]{
+
+}
+
+
+
+
 /**
 * Iconography
 */
