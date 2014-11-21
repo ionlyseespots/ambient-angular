@@ -1,6 +1,6 @@
 {
   "name": "ambient",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "description": "Ambient design is a methodology for creating layout.",
   "main": [
     "dist/css/ambient.css",
@@ -33,14 +33,14 @@
     "less",
     "index.html"
   ],
-  "_release": "1.1.0",
+  "_release": "1.2.2",
   "_resolution": {
     "type": "version",
-    "tag": "1.1.0",
-    "commit": "7ca42528d9d841c68a9742066494cc1bd26d99db"
+    "tag": "1.2.2",
+    "commit": "25c6c43b02cb9099729ffa606693a181339d7843"
   },
   "_source": "git://github.com/ionlyseespots/ambient-design.git",
-  "_target": "~1.1.0",
+  "_target": "~1.2.2",
   "_originalSource": "ambient",
   "_direct": true
 }
