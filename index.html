@@ -48,7 +48,10 @@
             Ambient makes use of flexbox (main & cross axis). Messages in Ambient will be z-axis.
         </p>
         <p>
-            I want to get away from rigid message type classes for initial layout in Ambient <em>(e.g.: info, warning, danger)</em> and simply supply 5 message flow priorities. Design classes can then be added to create custom design types based on the priority.
+            I want to get away from rigid message type classes for initial layout in Ambient <em>(e.g.: info, warning, danger)</em> and simply have design for message  <em>flow priorities</em>.
+        </p>
+        <p>
+            Design classes can then be added to create custom design types based on the priority.
         </p>
         <section am-component am-padding>
             <h1>
@@ -113,7 +116,7 @@
             <h2>
                 <code>am-form="aligned"</code>
             </h2>
-            <form am-form="aligned" name="myForm">
+            <form am-form="aligned message" name="myForm">
                 <span>
                     <label for="aligned-email">
                         Email
@@ -126,10 +129,10 @@
                        required />
                 </span>
 
-                <div ng-if="myForm.myEmail.$invalid">Invalid.</div>
-                <div ng-if="myForm.myEmail.$valid">Valid.</div>
-                <div ng-if="myForm.myEmail.$pristine">Pristine.</div>
-                <div ng-if="myForm.myEmail.$dirty">Dirty.</div>
+                <div am-message="z-3" ng-if="myForm.myEmail.$invalid">Invalid.</div>
+                <div am-message="z-1"  ng-if="myForm.myEmail.$valid">Valid.</div>
+                <div am-message="z-1"  ng-if="myForm.myEmail.$pristine">Pristine.</div>
+                <div am-message="z-3"  ng-if="myForm.myEmail.$dirty">Dirty.</div>
             </form>
         </section>
 
