@@ -42,7 +42,7 @@
             Form Validation, ngMessages, $asyncValidators, and $pending
         </p>
         <p>
-            UI pattern <code>am-form</code>
+            UI pattern <code>am-layout</code>
         </p>
         <p>
             Ambient makes use of flexbox (main & cross axis). Messages in Ambient will be z-axis.
@@ -58,22 +58,22 @@
                 Stacked form
             </h1>
             <h2>
-                <code>am-form="stacked message"</code>
+                <code>am-layout="stacked message"</code>
             </h2>
 
-            <form am-form="stacked message" name="demoForm" ng-controller="formStatesCtrl" novalidate>
+            <form am-layout="stacked message" name="demoForm" ng-controller="formStatesCtrl" novalidate>
 
                 <label for="stacked-name">Username:</label>
                 <input id="stacked-name" type="text" name="username" ng-model="username" username-validator ng-required="true" placeholder="User Name" />
                 <!--$asyncValidators with the $pending Property-->
-                <span am-message="z-1" ng-show="demoForm.username.$pending">Checking Availability . . .</span>
+                <span am-layer="z-1" ng-show="demoForm.username.$pending">Checking Availability . . .</span>
 
                 <!--Using $submit Property to display errors if someone opens the app and tries to submit the form without entering anything in any field-->
                 <div ng-messages="demoForm.username.$error" ng-if="demoForm.username.$touched || demoForm.$submitted">
 
-                <div am-message="z-1" class="error-message" ng-message="usernameAvailability">Sorry! Username has been taken</div>
-                <div am-message="z-2" class="error-message" ng-show="demoForm.username.$error.username">Username must contain only letters and numbers.</div>
-                <div am-message="z-3" class="error-message" ng-show="demoForm.username.$error.required">Username is required.</div>
+                <div am-layer="z-1" am-padding am-margin="bottom" class="error-message" ng-message="usernameAvailability">Sorry! Username has been taken</div>
+                <div am-layer="z-2" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.username">Username must contain only letters and numbers.</div>
+                <div am-layer="z-3" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.required">Username is required.</div>
 
 
                 <!--<div class="error-message" ng-message="required">Username is required.</div>-->
@@ -84,39 +84,18 @@
                     <input id="stacked-remember" type="checkbox">
                     Remember me
                 </label>
-                <button type="submit"  class="btn btn-primary">Submit</button>
+                <button type="submit">Submit</button>
 
             </form>
-                  <pre>
-&lt;form am-form="stacked message"&gt;
-...
-    &lt;div am-message="z-1"&gt;
-       Checking Availability . . .
-    &lt;/div&gt;
-
-    &lt;div am-message="z-1"&gt;
-       Sorry! Username has been taken
-    &lt;/div&gt;
-
-    &lt;div am-message="z-2"&gt;
-       Username must contain only letters and numbers
-    &lt;/div&gt;
-
-    &lt;div am-message="z-3"&gt;
-      Username is required.
-    &lt;/div&gt;
-...
-&lt;/form&gt;
-      </pre>
         </section>
         <section am-component am-padding>
             <h1>
                 Aligned form
             </h1>
             <h2>
-                <code>am-form="aligned"</code>
+                <code>am-layout="aligned"</code>
             </h2>
-            <form am-form="aligned message" name="myForm">
+            <form am-layout="aligned message" name="myForm">
                 <span>
                     <label for="aligned-email">
                         Email
@@ -129,10 +108,10 @@
                        required />
                 </span>
 
-                <div am-message="z-3" ng-if="myForm.myEmail.$invalid">Invalid.</div>
-                <div am-message="z-1"  ng-if="myForm.myEmail.$valid">Valid.</div>
-                <div am-message="z-1"  ng-if="myForm.myEmail.$pristine">Pristine.</div>
-                <div am-message="z-3"  ng-if="myForm.myEmail.$dirty">Dirty.</div>
+                <div am-layer="z-2" am-padding am-margin="bottom" ng-if="myForm.myEmail.$invalid">Invalid.</div>
+                <div am-layer="z-1" am-padding am-margin="bottom" ng-if="myForm.myEmail.$valid">Valid.</div>
+                <div am-layer="z-1" am-padding am-margin="bottom" ng-if="myForm.myEmail.$pristine">Pristine.</div>
+                <div am-layer="z-2" am-padding am-margin="bottom" ng-if="myForm.myEmail.$dirty">Dirty.</div>
             </form>
         </section>
 

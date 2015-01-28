@@ -1,13 +1,17 @@
 {
   "name": "ambient",
-  "version": "1.2.2",
-  "description": "Ambient design is a methodology for creating layout.",
+  "version": "1.2.14",
+  "dependencies": {
+    "normalize-css": "latest"
+  },
+  "description": "Ambient is a lightweight and modular HTML5 UI development methodology",
   "main": [
-    "dist/css/ambient.css",
-    "dist/css/ambient.min.css"
+    "dist/css/*",
+    "less/*"
   ],
   "keywords": [
-    "css",
+    "css3",
+    "html5",
     "flexbox",
     "front-end",
     "framework",
@@ -30,17 +34,17 @@
     "design-patterns",
     "docs",
     "examples",
-    "less",
-    "index.html"
+    "less/ambient.min.css",
+    "index.html",
+    "apple-touch-icon.png"
   ],
-  "_release": "1.2.2",
+  "_release": "1.2.14",
   "_resolution": {
     "type": "version",
-    "tag": "1.2.2",
-    "commit": "25c6c43b02cb9099729ffa606693a181339d7843"
+    "tag": "1.2.14",
+    "commit": "4b6fdbfec657785f945798122c09e24fe6226e4b"
   },
   "_source": "git://github.com/ionlyseespots/ambient-design.git",
   "_target": "~1.2.2",
-  "_originalSource": "ambient",
-  "_direct": true
+  "_originalSource": "ambient"
 }
