@@ -60,8 +60,10 @@
             <h2>
                 <code>am-layout="stacked message"</code>
             </h2>
+            <div>
 
-            <form am-layout="stacked message" name="demoForm" ng-controller="formStatesCtrl" novalidate>
+
+            <form am-layout="stacked" name="demoForm" ng-controller="formStatesCtrl" novalidate>
 
                 <label for="stacked-name">Username:</label>
                 <input id="stacked-name" type="text" name="username" ng-model="username" username-validator ng-required="true" placeholder="User Name" />
@@ -71,9 +73,9 @@
                 <!--Using $submit Property to display errors if someone opens the app and tries to submit the form without entering anything in any field-->
                 <div ng-messages="demoForm.username.$error" ng-if="demoForm.username.$touched || demoForm.$submitted">
 
-                <div am-layer="z-1" am-padding am-margin="bottom" class="error-message" ng-message="usernameAvailability">Sorry! Username has been taken</div>
-                <div am-layer="z-2" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.username">Username must contain only letters and numbers.</div>
-                <div am-layer="z-3" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.required">Username is required.</div>
+                <div am-layer="z1 shadow hvr-elevate" am-padding am-margin="bottom" class="error-message" ng-message="usernameAvailability">Sorry! Username has been taken</div>
+                <div am-layer="z2 shadow hvr-elevate" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.username">Username must contain only letters and numbers.</div>
+                <div am-layer="z3 shadow hvr-elevate" am-padding am-margin="bottom" class="error-message" ng-show="demoForm.username.$error.required">Username is required.</div>
 
 
                 <!--<div class="error-message" ng-message="required">Username is required.</div>-->
@@ -87,6 +89,7 @@
                 <button type="submit">Submit</button>
 
             </form>
+            </div>
         </section>
         <section am-component am-padding>
             <h1>
@@ -95,24 +98,26 @@
             <h2>
                 <code>am-layout="aligned"</code>
             </h2>
-            <form am-layout="aligned message" name="myForm">
-                <span>
-                    <label for="aligned-email">
-                        Email
-                    </label>
-                <input id="aligned-email" type="email"
-                       name="myEmail"
-                       minlength="5"
-                       maxlength="100"
-                       ng-model="myEmail"
-                       required />
-                </span>
+            <div>
+                <form am-layout="aligned" name="myForm">
+                    <span>
+                        <label for="aligned-email">
+                            Email
+                        </label>
+                    <input id="aligned-email" type="email"
+                           name="myEmail"
+                           minlength="5"
+                           maxlength="100"
+                           ng-model="myEmail"
+                           required >
+                    </span>
 
-                <div am-layer="z-2" am-padding am-margin="bottom" ng-if="myForm.myEmail.$invalid">Invalid.</div>
-                <div am-layer="z-1" am-padding am-margin="bottom" ng-if="myForm.myEmail.$valid">Valid.</div>
-                <div am-layer="z-1" am-padding am-margin="bottom" ng-if="myForm.myEmail.$pristine">Pristine.</div>
-                <div am-layer="z-2" am-padding am-margin="bottom" ng-if="myForm.myEmail.$dirty">Dirty.</div>
-            </form>
+                    <div am-layer="z2 shadow hvr-elevate" am-padding am-margin="bottom" ng-if="myForm.myEmail.$invalid">Invalid.</div>
+                    <div am-layer="z1 shadow hvr-elevate" am-padding am-margin="bottom" ng-if="myForm.myEmail.$valid">Valid.</div>
+                    <div am-layer="z1 shadow hvr-elevate" am-padding am-margin="bottom" ng-if="myForm.myEmail.$pristine">Pristine.</div>
+                    <div am-layer="z2 shadow hvr-elevate" am-padding am-margin="bottom" ng-if="myForm.myEmail.$dirty">Dirty.</div>
+                </form>
+            </div>
         </section>
 
 
